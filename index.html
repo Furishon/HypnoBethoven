@@ -1,8 +1,6 @@
 <html>
 	<style>
 		.wrapper { 
-			
-		
 			left:0;
 			right: 0;
 			top: 0;
@@ -39,11 +37,18 @@
 		body {
 			margin: 0;
 		}
-		#glasses {
-			position: fixed;	
-			top: 17%;
-			left: 40%;
+		img {
+			width: 100%;
+			height: 100%;
+			position: fixed;
 		}
+		#glasses {
+			z-index: 2;
+		}
+		#mask {
+			z-index: 1;
+		}
+
 	</style>
 	<head>
 		<link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
@@ -54,16 +59,15 @@
 	</head>
 	<body>
 		<div class="wrapper">
-			<img src="mask.png" id="mask" width="100%" height="100%">
+			<img src="maskWithGlasses.png" id="mask">
 		</div>
 
-		<img src="mask.png" width="100%" height="100%">
-		<img src="glasses.png" id="glasses">	
+		<img src="glassesMask.png" id="glasses">
+		<img src="mask.png" id="mask">
 		
-
 		<script type="text/javascript">
 			$(".wrapper").hide();
-			$("#glasses").hide();
+				$("#glasses").hide();
 
 			function discoStarter() {
 				
